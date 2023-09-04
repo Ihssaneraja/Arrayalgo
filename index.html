@@ -1,0 +1,127 @@
+ALGORUTHME SumOfDistinctElements
+
+Varibles
+N: INTEGER  // Size of sets SetA and SetB
+SetA(N) :INTEGR
+SetB(N) :INTEGER
+Somme:ENTEGER
+i,j:ENTEGER
+Element: INTEGER
+
+
+Debut 
+INPUT N  // Read the size of the sets
+
+
+Some=0 // Initialize Sum to 0
+
+// Loop through SetA
+
+for i De 1 to N  Do 
+
+    Element = SetA[i]
+
+
+
+
+
+// Check if Element is not present in SetB
+
+for j de 1 to N  Do 
+
+    IF Element = SetB[j] THEN
+        Element = 0  // Element is present in SetB, set it to 0
+        EXIT  // Exit the inner loop
+      END IF
+      END FOR
+
+
+/ Add Element to Sum if it's not zero (not present in SetB)
+
+IF Element <> 0 THEN
+Sum = Sum + Element
+END IF
+END FOR
+
+OUTPUT Sum  // Output the sum of distinct elements
+END
+----------------------------------------------------------------------------------
+
+Algorithme  Dot product
+
+var
+v1:Array[1..N:Real
+v2:Array[1..N]:Real  
+i:ENTEGER
+P:Real
+
+BEGIN
+
+    FOR i FROM 0 TO LENGTH(v1) - 1 DO
+
+        p := p + (v1[i] * v2[i]);
+
+      END FOR
+
+      ecrire("le produit sclaire des vectuer v1 est v2 est",p)
+
+    RETURN p
+END
+
+ALGORITHM DetermineOrthogonality
+
+Var 
+
+n:Integer 
+v1:Array[1...n]:Real 
+v2:Array[1...n]:Real
+i:ENTEGR 
+Orthogonal:ARRAY [1..n] OF BOOLEAN
+
+
+FOR i FROM 1 TO n DO
+// Read vector pairs v1[i] and v2[i] 
+READ v1[i]
+READ v2[i]
+
+// calculate dot product of v1[i] And v2[i] by the function
+
+        DECLARE ps: REAL := dot_product(v1[i], v2[i])
+
+        // Check if dot product is approximately zero (considering floating-point precision)
+
+        IF ABS(p) < 0 THEN
+
+            Orthogonal[i] := TRUE
+            
+        ELSE
+
+            Orthogonal[i] := FALSE
+
+        END IF
+
+    END FOR
+
+    // Output check vectors are orthogonal
+
+    FOR i FROM 1 TO n DO
+
+        IF Orthogonal[i] THEN
+
+            OUTPUT "Vector pair ", i, " is orthogonal"
+
+        ELSE
+
+            OUTPUT "Vector pair ", i, " is not orthogonal"
+
+        END IF
+
+    END FOR
+
+END
+
+
+
+
+
+
